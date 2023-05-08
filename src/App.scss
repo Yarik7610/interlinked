@@ -1,0 +1,149 @@
+$accent-dark: rgb(27, 30, 41);
+$bg-dark: rgb(40, 44, 52);
+$accent-light: rgb(233, 240, 244);
+$bg-light: rgb(246, 249, 251);
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: 'Open Sans', sans-serif;    
+}
+
+.light{
+    background-color: $bg-light;
+    color: black;
+    height: 100vh;
+    & > div > div {
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    }
+    .searchBlock, .logInput {
+        background-color: $accent-light;
+    }
+    .menuLogout {
+        background-color: $accent-light;
+        box-shadow: rgba(100, 100, 111, 0.4) 0px 0px 29px 0px;
+        &:before {
+            border-bottom: 6px solid var(--accent-light);
+            box-shadow: rgba(100, 100, 111, 0.4) 0px 0px 29px 0px;
+        }
+    }
+}
+
+
+.dark{
+    background-color: $bg-dark;
+    color: white;
+    height: 100vh;
+    & > div > div {
+        box-shadow: rgba(159,154, 140, 0.2) 0px 0px 29px 0px;
+    }
+    .searchBlock, .logInput {
+        background-color: $accent-dark;
+    }
+    .menuLogout {
+        background-color: $accent-dark;
+        box-shadow: rgba(159,154, 140, 0.2) 0px 0px 29px 0px;
+        &:before {
+            border-bottom: 6px solid var(--accent-dark);
+            box-shadow: rgba(159,154, 140, 0.2) 0px 0px 29px 0px;
+        }
+    }
+}
+
+.btn-change-theme {
+    justify-self: center;
+    color: inherit;
+    background-color: transparent;
+    width: 34px;
+    height: 34px;
+    border-radius: 34px;
+    transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover {
+        background-color: rgba(100, 100, 111, 0.2);
+    }
+}
+
+.searchBlock {
+    height: 56%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+.logInput {
+    outline: none;
+    width: 100%;
+    color: inherit;
+    border-radius: 4px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-weight: 500;
+}
+.menuLogout {
+    z-index: 1;
+    box-sizing: border-box;
+    width: 100%;
+    height: 50px;
+    padding: 10px 0;
+    border-radius: 5px;
+    position: absolute;
+    top: 120%;
+    &:before {
+        z-index: 1;
+        content: '';
+        position: absolute;
+        right: 14px;
+        top: -6px;
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-bottom: 6px solid inherit;
+    } 
+} 
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.App {
+    margin: 0 auto;
+    padding-top: 7px;
+    width: 86%;
+    height: calc(100vh - 14px);
+    display: grid;
+    grid-template-areas:
+        "n h"
+        "n c";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 4.5fr;
+    gap:10px
+}
+
+.app-wrapper__content {
+    grid-area: c;
+    overflow: hidden;
+    border-bottom-right-radius: 10px;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    & ::-webkit-scrollbar {
+        background: transparent; /* Chrome/Safari/Webkit */
+        width: 0px;
+    }
+}
+
+
+.errorBorder {
+    border: 1px solid red;
+ }
+ 
+.errorMsg {
+    color: red;
+ }
+

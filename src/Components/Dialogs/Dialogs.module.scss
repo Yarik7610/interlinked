@@ -1,0 +1,25 @@
+.dialogs {
+    display: grid;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: scroll;
+    grid-template-columns: 3fr 10fr;
+}
+
+.dialogsItems {
+    padding: 10px;
+    position: relative;
+    &:before {
+        position: absolute;
+        content: '';
+        top:2.5%;
+        right:0;
+        width: 2px;
+        height: 95%;
+        background-color: rgb(1, 246, 233);
+    }
+}
+
+.messagesItems {
+    padding: 10px;
+}

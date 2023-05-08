@@ -1,0 +1,35 @@
+.header {
+    width: 100%;
+    margin: 0 auto;
+    grid-area: h;
+    border-top-right-radius: 10px;
+    height: 70px;
+    display: grid;
+    padding: 0px 20px;
+    grid-template-columns: 1.25fr 1fr 0.5fr ;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.magnifier {
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+    width: 10%;
+}
+
+.searchInput {
+    display: block;
+    color: inherit;
+    padding: 0px 5px;
+    width: 90%;
+    background: none;
+    outline: none;
+}
+
+.loginBlock {
+    color: inherit;
+    background-color: inherit;
+    justify-self: flex-end;
+}
+

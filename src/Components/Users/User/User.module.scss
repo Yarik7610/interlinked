@@ -1,0 +1,36 @@
+.user {
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 0.8fr;
+    align-items: center;
+    justify-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid rgb(217, 225, 230);
+}
+
+
+.userImgBlock {
+    justify-self: flex-start;
+    display: flex;
+    align-items: center;
+    img {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        margin-right: 10px;
+    }
+}
+.userStatus {
+    justify-self: flex-start;
+}
+
+.followingBtn {
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    &:first-child{
+        color: inherit;
+    }
+}

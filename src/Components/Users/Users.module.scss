@@ -1,0 +1,23 @@
+.users {
+    height: 100%;
+    padding: 15px 20px 20px 20px;
+    box-sizing: border-box;
+    position: relative;
+    li:last-child {border-bottom: none;}
+}
+.userHl {
+    margin-bottom: 18px;
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+    .userHlText {
+        position: absolute;
+        top:0;
+        left: 10px;    
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+
+

@@ -1,0 +1,14 @@
+.pageNums {
+    margin-left: -5px;
+    justify-self: center;
+    display: flex;
+    justify-content: center;
+    span{
+        font-size: 16px;
+        margin-left: 5px;
+    }
+    .pageNumSelected {
+        color: rgb(1, 246, 233);
+    }
+
+}
