@@ -1,7 +1,7 @@
 import React, {useEffect, useState, lazy, Suspense} from "react";
 import "./App.scss";
 import { connect } from "react-redux";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes, useNavigate } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./Redux/redux-store"; 
@@ -23,8 +23,11 @@ const App = (props) => {
   }
   const [isDark, setIsDark] = useState(getTheme())
 
+  let navigate = useNavigate()
+
   useEffect(() => {
     props.initializeApp()
+    navigate('/login')
   }, [])
   
   
