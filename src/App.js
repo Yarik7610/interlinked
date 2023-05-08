@@ -58,11 +58,11 @@ let AppContainer =  connect(mapStateToProps, {initializeApp})(App)
 
 const SamuraiJSApp = (props) => { 
   return (
-    <BrowserRouter basename = '/interlinked'>
+    <HashRouter>
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
