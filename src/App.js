@@ -1,7 +1,7 @@
 import React, {useEffect, useState, lazy, Suspense} from "react";
 import "./App.scss";
 import { connect } from "react-redux";
-import { Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./Redux/redux-store"; 
@@ -58,11 +58,11 @@ let AppContainer =  connect(mapStateToProps, {initializeApp})(App)
 
 const SamuraiJSApp = (props) => { 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   )
 }
 
