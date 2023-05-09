@@ -22,7 +22,7 @@ const ProfileContainer = (props) => {
             props.getUserProfile(userId)
             props.getStatus(userId)
         }
-    }, [userId])
+    }, [userId, props.profileAuthImg])
 
     return (
         <Profile {...props} userId = {userId} /> 
