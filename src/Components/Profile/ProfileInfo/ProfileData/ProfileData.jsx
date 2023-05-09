@@ -1,12 +1,14 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import s from './ProfileData.module.scss'
 import Socials from './Socials/Socials'
 import ProfileStatus from './ProfileStatus/ProfileStatus'
 
 const ProfileData = (props) => {
 
-    if (props.userId) props.setInEdit(false) 
-    
+    useEffect(() => {
+      if (props.userId) props.setInEdit(false) 
+    }, [props.userId])
+
     return (
       <>
         {!props.userId 
