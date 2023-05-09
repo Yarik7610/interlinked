@@ -11,7 +11,10 @@ const Profile = (props) => {
 
   return (
     <div className={classes.profile}>
-      <ProfileInfo userId = {props.userId} updatePhoto = {props.updatePhoto} updateStatus = {props.updateStatus} status = {props.status} profile = {props.profile}/>
+      <ProfileInfo 
+        userId = {props.userId} updatePhoto = {props.updatePhoto} 
+        updateStatus = {props.updateStatus} profileAuthImg = {props.profileAuthImg}
+        status = {props.status} profile = {props.profile}/>
       <MyPostsContainer profile = {props.profile}/>
     </div>
   );

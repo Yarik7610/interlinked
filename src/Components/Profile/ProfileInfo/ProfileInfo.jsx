@@ -16,7 +16,7 @@ const ProfileInfo = (props) => {
         <img src= {bg}/>
       </div>
       <div className = {classes.profileImage}>
-        {props.profile.photos.large ? <img src = {props.profile.photos.large}/> : <img src = {noImg}/> }
+        {props.profileAuthImg ? <img src = {props.profileAuthImg}/> : <img src = {noImg}/> }
         {!props.userId ? <ChangeImg updatePhoto = {props.updatePhoto}/> : ''}
       </div>
       <div className ={classes.descr}>
