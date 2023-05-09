@@ -1,0 +1,15 @@
+.contactsWrap {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.contacts {
+    width: inherit;
+    margin-top: 10px;
+    padding-left: 10px;
+    // & > div:hover{
+    //     color: rgb(19, 61, 154);
+    // }
+}

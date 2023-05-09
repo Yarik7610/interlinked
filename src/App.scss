@@ -17,7 +17,7 @@ $bg-light: rgb(246, 249, 251);
     & > div > div {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     }
-    .searchBlock, .logInput {
+    .searchBlock, .logInput, .toggleSocialsBtn, .btnProfileEdit  {
         background-color: $accent-light;
     }
     .menuLogout {
@@ -38,7 +38,7 @@ $bg-light: rgb(246, 249, 251);
     & > div > div {
         box-shadow: rgba(159,154, 140, 0.2) 0px 0px 29px 0px;
     }
-    .searchBlock, .logInput {
+    .searchBlock, .logInput, .toggleSocialsBtn, .btnProfileEdit {
         background-color: $accent-dark;
     }
     .menuLogout {
@@ -49,6 +49,7 @@ $bg-light: rgb(246, 249, 251);
             box-shadow: rgba(159,154, 140, 0.2) 0px 0px 29px 0px;
         }
     }
+    
 }
 
 .btn-change-theme {
@@ -67,6 +68,25 @@ $bg-light: rgb(246, 249, 251);
     }
 }
 
+.btnProfileEdit {
+    background-color: inherit;
+    color: inherit;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+    margin: 5px 0px 10px 0px;
+}
+
+.toggleSocialsBtn {
+    background-color: inherit;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 10px;
+    text-align: center;
+    width: 100px;
+}
 .searchBlock {
     height: 56%;
     border-radius: 10px;
@@ -81,6 +101,10 @@ $bg-light: rgb(246, 249, 251);
     padding: 12px 20px;
     box-sizing: border-box;
     font-weight: 500;
+    &::placeholder {
+        color:inherit;
+        opacity: 0.5;
+    }
 }
 .menuLogout {
     z-index: 1;

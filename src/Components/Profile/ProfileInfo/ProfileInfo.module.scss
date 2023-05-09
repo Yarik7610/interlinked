@@ -9,6 +9,7 @@
         display: block;
         margin: 1.1%;
     }
+    
 }
 
 .profileImage img {
@@ -23,15 +24,4 @@
     margin-top: 25px;
     padding: 10px 30px 10px 30px;
     position: relative;
-}
-.contacts {
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    top: 0;
-    right: 15px;
-    &:hover{
-        color: rgb(19, 61, 154);
-    }
 }
