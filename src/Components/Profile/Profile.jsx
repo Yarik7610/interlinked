@@ -12,6 +12,7 @@ const Profile = (props) => {
   return (
     <div className={classes.profile}>
       <ProfileInfo 
+        saveProfile = {props.saveProfile}
         userId = {props.userId} updatePhoto = {props.updatePhoto} 
         updateStatus = {props.updateStatus} profileAuthImg = {props.profileAuthImg}
         status = {props.status} profile = {props.profile}/>

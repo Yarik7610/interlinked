@@ -37,6 +37,9 @@ export const profileAPI = {
     updateStatus(status) {  //нету айди так как он в куку залогиненного юзера
         return instance.put(`profile/status`, {status:status})
     },
+    updateProfile(data) {
+        return instance.put(`profile`, data)
+    },
     updateProfilePhoto(imgPath) {
         const formData = new FormData()
         formData.append('img', imgPath)

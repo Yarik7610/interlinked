@@ -6,12 +6,10 @@ import ChangeImg from './ChangeImg/ChangeImg'
 import ProfileData from "./ProfileData/ProfileData";
 import ProfileDataForm from './ProfileDataForm/ProfileDataForm'
 
-
-
 const ProfileInfo = (props) => {
 
   const [inEdit, setInEdit] = useState(false)
-  useEffect(() => console.log(inEdit), [inEdit])
+ 
   
   return (
     <div className = {classes.profileInfo}>
@@ -24,7 +22,7 @@ const ProfileInfo = (props) => {
       </div>
       <div className ={classes.descr}>
         {props.userId === undefined && inEdit
-          ? <ProfileDataForm profile = {props.profile} setInEdit = {setInEdit}/>
+          ? <ProfileDataForm profile = {props.profile} setInEdit = {setInEdit} saveProfile = {props.saveProfile}/>
           : <ProfileData userId = {props.userId} setInEdit = {setInEdit} {...props}/>
         }
       </div>

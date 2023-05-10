@@ -89,3 +89,18 @@ export const updatePhoto = (imgPath) => async (dispatch) => {
     dispatch(setProfileImg(response.data.data.photos.large))
   }
 }
+
+export const saveProfile = (data, userId, setError) => async (dispatch) => {
+  let response = await profileAPI.updateProfile(data)
+  if (response.data.resultCode === 0) {
+    dispatch(getUserProfile(userId))
+  } 
+  else {
+    let parsedName = response.data.messages[0].slice(30, -1)
+    let lowerCaseName = parsedName[0].toLowerCase() + parsedName.slice(1)
+    setError(`contacts.${lowerCaseName}`, {
+      message: response.data.messages[0]
+    })
+    return Promise.reject(response.data.messages[0])
+  }
+}

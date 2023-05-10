@@ -18,7 +18,8 @@ const ProfileData = (props) => {
         <h1>{props.profile.fullName}</h1>
         <ProfileStatus updateStatus = {props.updateStatus} status = {props.status}/>
         <div className = {s.aboutMe}>
-          About me: {props.profile.aboutMe}
+          <div>About me: {props.profile.aboutMe}</div> 
+          <div>Looking for a job description: {props.profile.lookingForAJobDescription}</div>
         </div>
         <Socials profile = {props.profile}/>
       </>
