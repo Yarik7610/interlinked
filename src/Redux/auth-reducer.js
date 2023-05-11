@@ -1,5 +1,6 @@
-import {authAPI} from "../api/api"
+import {authAPI, securityAPI} from "../api/api"
 const SET_AUTH_USER_DATA = "SET_USER_DATA" 
+const SET_CAPTCHA_URL = "SET_CAPTCHA_URL"
 
 let initialState = {
     id: null,
@@ -7,6 +8,7 @@ let initialState = {
     login: null,
     isAuth:false,
     authImg: null,
+    captchaURL: null,
 }
 
 const authReducer = (state = initialState, action) => {
@@ -18,6 +20,12 @@ const authReducer = (state = initialState, action) => {
              
             }
         } 
+        case SET_CAPTCHA_URL: {
+            return {
+                ...state,
+                captchaURL: action.captchaURL,
+            }
+        }
         default:
             return state  
     }  
@@ -27,6 +35,7 @@ export default authReducer;
 
 
 export const setAuthUserData = (id, email, login, isAuth) => ({type: SET_AUTH_USER_DATA, payload: {id, email, login, isAuth}}) 
+export const setCaptchaUrl = (captchaURL) => ({type: SET_CAPTCHA_URL, captchaURL})
 
 export const getAuthUserData = () => async (dispatch) => {
     let data = await authAPI.me()
@@ -36,11 +45,16 @@ export const getAuthUserData = () => async (dispatch) => {
     }
 }
 
-export const login = (email, password, rememberMe, setError) => async(dispatch) => {
-    let response = await authAPI.login(email, password, rememberMe, setError)
+export const login = (email, password, rememberMe, captcha, setError) => async(dispatch) => {
+    let response = await authAPI.login(email, password, rememberMe, captcha)
     if (response.data.resultCode === 0) {
         dispatch(getAuthUserData())
-    } else {
+        dispatch(setCaptchaUrl(null));
+    } 
+    else {
+        if (response.data.resultCode === 10) {
+            dispatch(getCaptchaUrl())
+        }
         setError("server", {
             message: response.data.messages[0]
         })
@@ -54,4 +68,9 @@ export const logout = () => async (dispatch) => {
     }
 }
 
+export const getCaptchaUrl = () => async (dispatch) => {
+    let response = await securityAPI.getCaptchaUrl()
+    const captchaURL = response.data.url
+    dispatch(setCaptchaUrl(captchaURL))
+}
 

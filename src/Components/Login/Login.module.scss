@@ -1,7 +1,11 @@
+.loginWrap {
+    height: 100%;
+    overflow-y:scroll
+}
 .loginForm {
     border-radius: 4px;
     box-shadow: 0px 0px 20px rgb(0,0,0, 0.4);
-    margin: 80px auto 10px;
+    margin: 80px auto 10px auto;
     max-width: 600px;
     overflow: hidden;
     padding: 40px 40px;
@@ -64,3 +68,9 @@
     }  
 }
 
+.captchaBlock {
+    img {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

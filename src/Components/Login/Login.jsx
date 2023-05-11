@@ -12,7 +12,8 @@ const LoginForm = (props) => {
         mode: 'all'
     })
     const onSubmit = (data) => {
-        props.login(data.email, data.password, data.rememberMe, setError)
+        console.log(data)
+        props.login(data.email, data.password, data.rememberMe, data.captcha, setError)
         reset()
     }
 
@@ -53,7 +54,22 @@ const LoginForm = (props) => {
                 <span className= {classes.remember}>Remember me</span>
             </div>
             {errors.server && <div className="errorMsg">{errors.server.message}</div>}
-            <div><button className= {classes.btnSbm} disabled = {!isValid}>Log in</button></div>
+            <div>
+                {props.captchaURL ? 
+                    <div className= {classes.captchaBlock}>
+                        <img src = {props.captchaURL}/>
+                        <input onFocus = {() => {clearErrors(['server'])}} type = "text"  
+                            className = {`logInput ${errors.captcha && 'errorBorder'}`}
+                            {...register('captcha', {
+                                required: "Captcha is required",
+                            })}
+                        />
+                        {errors.captcha && <div className="errorMsg">{errors.captcha.message}</div>}
+                    </div> 
+                    : ''
+                }
+                <button className= {classes.btnSbm} disabled = {!isValid}>Log in</button>
+            </div>
           
         </form>
     )
@@ -66,8 +82,8 @@ const Login = (props) => {
     if (props.isAuth) return <Navigate to={'/profile'}/>
 
     return (
-        <div>
-            <LoginForm login = {props.login}/>
+        <div className={classes.loginWrap}>
+            <LoginForm captchaURL = {props.captchaURL} login = {props.login}/>
         </div>
         
     )
@@ -75,7 +91,8 @@ const Login = (props) => {
 }
 
 const mapStateToProps = (state) => ({
-    isAuth: state.auth.isAuth, 
+    isAuth: state.auth.isAuth,
+    captchaURL: state.auth.captchaURL,
 })
 
 export default connect(mapStateToProps, {login})(Login)
