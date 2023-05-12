@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/interlinked/static/css/main.48ff5137.css",
-    "main.js": "/interlinked/static/js/main.82f25d5c.js",
+    "main.css": "/interlinked/static/css/main.f1395b7e.css",
+    "main.js": "/interlinked/static/js/main.e187c074.js",
     "static/css/923.03cc630b.chunk.css": "/interlinked/static/css/923.03cc630b.chunk.css",
     "static/js/923.c6dbd632.chunk.js": "/interlinked/static/js/923.c6dbd632.chunk.js",
     "static/css/786.abb34a12.chunk.css": "/interlinked/static/css/786.abb34a12.chunk.css",
-    "static/js/786.60e98d7c.chunk.js": "/interlinked/static/js/786.60e98d7c.chunk.js",
+    "static/js/786.c3e25224.chunk.js": "/interlinked/static/js/786.c3e25224.chunk.js",
     "static/css/610.1cf42ca2.chunk.css": "/interlinked/static/css/610.1cf42ca2.chunk.css",
     "static/js/610.9233f582.chunk.js": "/interlinked/static/js/610.9233f582.chunk.js",
     "static/js/348.c15e8e59.chunk.js": "/interlinked/static/js/348.c15e8e59.chunk.js",
@@ -15,18 +15,18 @@
     "static/media/dialogImg.webp": "/interlinked/static/media/dialogImg.0336172e8251375fb041.webp",
     "static/media/preloader.svg": "/interlinked/static/media/preloader.dbc885a0a3a32ddb75056f904f0fe605.svg",
     "index.html": "/interlinked/index.html",
-    "main.48ff5137.css.map": "/interlinked/static/css/main.48ff5137.css.map",
-    "main.82f25d5c.js.map": "/interlinked/static/js/main.82f25d5c.js.map",
+    "main.f1395b7e.css.map": "/interlinked/static/css/main.f1395b7e.css.map",
+    "main.e187c074.js.map": "/interlinked/static/js/main.e187c074.js.map",
     "923.03cc630b.chunk.css.map": "/interlinked/static/css/923.03cc630b.chunk.css.map",
     "923.c6dbd632.chunk.js.map": "/interlinked/static/js/923.c6dbd632.chunk.js.map",
     "786.abb34a12.chunk.css.map": "/interlinked/static/css/786.abb34a12.chunk.css.map",
-    "786.60e98d7c.chunk.js.map": "/interlinked/static/js/786.60e98d7c.chunk.js.map",
+    "786.c3e25224.chunk.js.map": "/interlinked/static/js/786.c3e25224.chunk.js.map",
     "610.1cf42ca2.chunk.css.map": "/interlinked/static/css/610.1cf42ca2.chunk.css.map",
     "610.9233f582.chunk.js.map": "/interlinked/static/js/610.9233f582.chunk.js.map",
     "348.c15e8e59.chunk.js.map": "/interlinked/static/js/348.c15e8e59.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.48ff5137.css",
-    "static/js/main.82f25d5c.js"
+    "static/css/main.f1395b7e.css",
+    "static/js/main.e187c074.js"
   ]
 }
