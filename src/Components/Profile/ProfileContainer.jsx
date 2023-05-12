@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Profile from "./Profile"
 import { connect } from "react-redux";
 import {getUserProfile, getStatus, updateStatus, updatePhoto, saveProfile} from "../../Redux/profile-reducer"

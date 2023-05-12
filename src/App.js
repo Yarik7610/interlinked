@@ -45,6 +45,7 @@ const App = (props) => {
               <Route path="/dialogs/*" element={<DialogsContainer />} />
               <Route path="/users" element={<UsersContainer />} />
               <Route path="/login" element={<Login />} />
+              <Route path='*' element={<div>404 Not found</div>}/>
             </Routes>
           </Suspense>
         </div>

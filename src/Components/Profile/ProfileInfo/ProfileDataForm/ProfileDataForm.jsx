@@ -35,13 +35,6 @@ const ProfileDataForm = (props) => {
       <div className= {classes.profileDataForm}>
         <form onSubmit = {handleSubmit(onSubmit)}>
           <button type = 'submit' className = 'btnProfileEdit' disabled = {!isValid}>Save changes</button>
-          <input className = {`logInput ${errors.fullName && 'errorBorder'}`} placeholder='Fullname' type = 'text'
-            {...register('fullName', {
-              required: 'Fullname is required',
-              validate: value => value.trim() !== '' ? null : 'No white spaces',
-            })}
-          />
-          {errors.fullName && <div className="errorMsg">{errors.fullName.message}</div>}
           <input className = 'logInput' placeholder='About me' type = 'text' 
             {...register('aboutMe', {
               required: 'About me is required',
