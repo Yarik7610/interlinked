@@ -1,4 +1,4 @@
-import React, {useEffect, useState, lazy, Suspense} from "react";
+import React, {useEffect, useState, lazy, Suspense, createContext} from "react";
 import "./App.scss";
 import { connect } from "react-redux";
 import { HashRouter, Route, Routes, useNavigate } from "react-router-dom";
@@ -15,6 +15,10 @@ import Preloader from "./Components/Preloader/Preloader";
 const DialogsContainer = lazy(() => import("./Components/Dialogs/DialogsContainer"))
 const ProfileContainer = lazy(() => import("./Components/Profile/ProfileContainer"))
 const UsersContainer = lazy(() => import("./Components/Users/UsersContainer"))
+
+export const ThemeContext = createContext(null)
+
+
 
 const App = (props) => {
 
@@ -34,23 +38,25 @@ const App = (props) => {
   if (!props.initialized) return <Preloader/>
   
   return (
-    <Layout isDark = {isDark}>
-      <div className = 'App'>
-        <HeaderContainer isDark = {isDark} setIsDark = {setIsDark}/>
-        <Navbar />
-        <div className="app-wrapper__content">
-          <Suspense fallback = {<Preloader/>}>
-            <Routes>
-              <Route path="/profile/:userId?" element={<ProfileContainer />} />
-              <Route path="/dialogs/*" element={<DialogsContainer />} />
-              <Route path="/users" element={<UsersContainer />} />
-              <Route path="/login" element={<Login />} />
-              <Route path='*' element={<div>404 Not found</div>}/>
-            </Routes>
-          </Suspense>
+    <ThemeContext.Provider value = {{isDark, setIsDark}}>
+      <Layout>
+        <div className = 'App'>
+          <HeaderContainer/>
+          <Navbar />
+          <div className="app-wrapper__content">
+            <Suspense fallback = {<Preloader/>}>
+              <Routes>
+                <Route path="/profile/:userId?" element={<ProfileContainer />} />
+                <Route path="/dialogs/*" element={<DialogsContainer />} />
+                <Route path="/users" element={<UsersContainer />} />
+                <Route path="/login" element={<Login />} />
+                <Route path='*' element={<div>404 Not found</div>}/>
+              </Routes>
+            </Suspense>
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </ThemeContext.Provider>
   );
 };
 
