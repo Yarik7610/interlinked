@@ -1,6 +1,6 @@
 .user {
     display: grid;
-    grid-template-columns: 1.5fr 2fr 0.8fr;
+    grid-template-columns: 1.5fr 2fr;
     align-items: center;
     justify-items: center;
     padding: 8px 0;
@@ -10,6 +10,7 @@
 
 .userImgBlock {
     justify-self: flex-start;
+    padding-left: 10px;
     display: flex;
     align-items: center;
     img {
@@ -20,7 +21,10 @@
     }
 }
 .userStatus {
-    justify-self: flex-start;
+    
+    justify-self: flex-end;
+    padding-right: 10px;
+    
 }
 
 .followingBtn {

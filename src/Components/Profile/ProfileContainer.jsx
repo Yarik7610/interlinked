@@ -12,7 +12,7 @@ const ProfileContainer = (props) => {
     
     let { userId } = useParams()
     let navigate = useNavigate()
-   
+
     useEffect(() => {
         if (!userId) { 
             userId = props.id

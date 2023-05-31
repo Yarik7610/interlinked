@@ -28,10 +28,10 @@ let User = ({u, follow, unfollow, followingInProgress}) => {
             <div className = {classes.userStatus}>
                 {u.status ? u.status : "no status yet"}
             </div>
-            <div className = {classes.userCountry}>
+            {/* <div className = {classes.userCountry}>
                 <div>{'u.location.country'}</div>
                 <div>{'u.location.city'}</div>
-            </div>
+            </div> */}
         </li>
     )
    

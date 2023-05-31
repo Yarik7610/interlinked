@@ -1,4 +1,4 @@
-import React, {useEffect, useState, lazy, Suspense, createContext} from "react";
+import React, {useEffect, useState, useRef, lazy, Suspense, createContext} from "react";
 import "./App.scss";
 import { connect } from "react-redux";
 import { HashRouter, Route, Routes, useNavigate } from "react-router-dom";
@@ -18,20 +18,20 @@ const UsersContainer = lazy(() => import("./Components/Users/UsersContainer"))
 
 export const ThemeContext = createContext(null)
 
-
-
 const App = (props) => {
 
   const getTheme = () => {
     return JSON.parse(localStorage.getItem("isDark")) || false
   }
+
+  const isMounted = useRef(false)
   const [isDark, setIsDark] = useState(getTheme())
 
-  let navigate = useNavigate()
+  const navigate = useNavigate()
 
   useEffect(() => {
     props.initializeApp()
-    navigate('/login')
+    navigate('/profile')
   }, [])
   
   

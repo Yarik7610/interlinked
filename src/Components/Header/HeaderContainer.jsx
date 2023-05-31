@@ -11,7 +11,8 @@ let mapStateToProps = (state) => ({
     login: state.auth.login,
     isFetching: state.auth.isFetching,
     isAuth: state.auth.isAuth,
-    profileAuthImg: state.profilePage.profileAuthImg,
+    profile: state.profilePage.profile,
+    profileAuthImg: state.profilePage.profileAuthImg
 })
    
 export default connect(mapStateToProps, {logout})(HeaderContainer)

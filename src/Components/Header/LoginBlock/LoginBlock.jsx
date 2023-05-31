@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import classes from './LoginBlock.module.scss';
 import {FiLogOut} from "react-icons/fi"
 import { Navigate } from "react-router-dom";
+import noImg from '../../../images/noImg.png'
+
 
 
 const LoginBlock = (props) => {

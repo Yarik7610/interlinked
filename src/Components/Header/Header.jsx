@@ -1,11 +1,11 @@
 import React from 'react';
 import classes from './Header.module.scss';
-import {AiOutlineSearch} from 'react-icons/ai'
 import { NavLink } from "react-router-dom";
 import LoginBlock from "./LoginBlock/LoginBlock"
 import {BsSun, BsMoon} from 'react-icons/bs'
 import { useContext } from 'react';
 import { ThemeContext } from '../../App';
+import SearchContainer from './Search/SearchContainer';
 
 const Header = (props) => {
     
@@ -18,10 +18,7 @@ const Header = (props) => {
 
     return (
         <div className={classes.header}>
-            <div className = 'searchBlock'>
-                <AiOutlineSearch size = {"1.5rem"} className = {classes.magnifier}/>
-                <input className = {classes.searchInput} type = "text" placeholder='Search user'/>
-            </div>
+            <SearchContainer/>
             <button onClick = {changeTheme} className = 'btn-change-theme'>
                 {isDark ? <BsSun size = {'1.5em'}/> :  <BsMoon size = {'1.5em'}/>}
             </button>

@@ -3,7 +3,6 @@ import dialogsReducer from './dialogs-reducer';
 import profileReducer from './profile-reducer';
 import usersReducer from './users-reducer';
 import authReducer from './auth-reducer';
-import friendsReducer from './friends-reducer';
 import appReducer from './app-reducer';
 
 const reducers = combineReducers({    
@@ -11,7 +10,6 @@ const reducers = combineReducers({
     dialogsPage: dialogsReducer,
     usersPage: usersReducer,
     auth: authReducer,
-    friends: friendsReducer,
     app: appReducer,
 });
 

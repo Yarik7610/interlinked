@@ -21,13 +21,17 @@ export default friendsReducer;
 export const setFriends = (friends) => ({type: SET_FRIENDS, friends})
 
 export const setMyFriends = () => (dispatch) => {
-    authAPI.me()
-    .then(data => {
-        if (data.resultCode === 0) {
-            usersAPI.getFriends()
-            .then(friends => {
-                dispatch(setFriends(friends.items))
-            })
-        }
+    // authAPI.me()
+    // .then(data => {
+    //     if (data.resultCode === 0) {
+    //         usersAPI.getFriends()
+    //         .then(friends => {
+    //             dispatch(setFriends(friends.items))
+    //         })
+    //     }
+    // })
+    usersAPI.getFriends()
+        .then(friends => {
+            dispatch(setFriends(friends.items))
     })
 }

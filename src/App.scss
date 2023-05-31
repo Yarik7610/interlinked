@@ -88,6 +88,8 @@ $bg-light: rgb(246, 249, 251);
     width: 100px;
 }
 .searchBlock {
+    position: relative;
+    overflow: hidden;
     height: 56%;
     border-radius: 10px;
     display: flex;

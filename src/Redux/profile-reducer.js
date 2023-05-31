@@ -69,7 +69,7 @@ export const setStatus = (status) => ({ type: SET_STATUS, status})
 export const getUserProfile = (userId) => async (dispatch, getState) => {
   let response = await profileAPI.getProfile(userId)
   dispatch(setUserProfile(response.data))
-  if (userId === getState().auth.id && response.data.photos.small) 
+  if (userId === getState().auth.id && response.data.photos.small)    //ИЗЗА ЭТОГО В НЕТВОРК ДВА РАЗА ЗАПРОС НА ПРОФИЛЬ И НА СТАТУС, другого лучшего решения не нашел
     dispatch(setProfileImg(response.data.photos.small))
 }
 

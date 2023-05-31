@@ -1,0 +1,24 @@
+
+.magnifier {
+    display: flex;
+    justify-content: center;
+    margin-left: 5px;
+    width: 10%;
+}
+
+.searchInput {
+    background: none;
+    outline: none;
+    color: inherit;
+    width: 80%;
+   
+}
+.crossIcon {
+    position: absolute;
+    top: 50%; transform: translateY(-50%);
+    right: 5px;
+    transition: opacity 0.3s;
+    &:hover {
+        opacity: 0.5;
+    }
+}

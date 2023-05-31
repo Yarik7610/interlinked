@@ -8,11 +8,12 @@ import { AiOutlineMessage } from "react-icons/ai";
 import { TbNews } from "react-icons/tb";
 import { RiSettings2Line } from "react-icons/ri"
 import { RiUserSearchFill } from "react-icons/ri"
+import { connect } from "react-redux";
 
 const setActive = ({ isActive }) =>
   isActive ? classes.active : classes.navItem; //деструктуризация объекта, стрелочая функция
 
-const Navbar = () => {
+const Navbar = ({isAuth}) => {
  
   return (
     <div className={classes.wrapper}>
@@ -51,13 +52,16 @@ const Navbar = () => {
               <div className={classes.navItemText}>Settings</div>
             </div>
           </NavLink>
-        <FriendsContainer/>
+        {isAuth ? <FriendsContainer/> : ''}
       </div>
     </div>
   );
 };
 
-export default Navbar;
+const mapStateToProps = (state) => ({
+  isAuth: state.auth.isAuth
+})
+export default connect(mapStateToProps)(Navbar);
 
 
 
