@@ -23,8 +23,6 @@ const App = (props) => {
   const getTheme = () => {
     return JSON.parse(localStorage.getItem("isDark")) || false
   }
-
-  const isMounted = useRef(false)
   const [isDark, setIsDark] = useState(getTheme())
 
   const navigate = useNavigate()
