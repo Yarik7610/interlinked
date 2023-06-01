@@ -9,8 +9,9 @@ import ProfileDataForm from './ProfileDataForm/ProfileDataForm'
 const ProfileInfo = (props) => {
 
   const [inEdit, setInEdit] = useState(false)
- 
   
+  
+
   return (
     <div className = {classes.profileInfo}>
       <div className={classes.bgImg}>
@@ -21,13 +22,11 @@ const ProfileInfo = (props) => {
         {!props.userId ? <ChangeImg updatePhoto = {props.updatePhoto}/> : ''}
       </div>
       <div className ={classes.descr}>
-        {props.userId === undefined && inEdit
+        {!props.userId && inEdit
           ? <ProfileDataForm profile = {props.profile} setInEdit = {setInEdit} saveProfile = {props.saveProfile}/>
           : <ProfileData userId = {props.userId} setInEdit = {setInEdit} {...props}/>
         }
       </div>
-      
-     
     </div>
   );
 }

@@ -16,7 +16,8 @@ const ProfileData = (props) => {
           : ''
         }
         <h1>{props.profile.fullName}</h1>
-        <ProfileStatus updateStatus = {props.updateStatus} status = {props.status}/>
+        {!props.userId ? <ProfileStatus updateStatus = {props.updateStatus} status = {props.status}/> 
+          : <div><span>{props.status || "---"}</span></div>}
         <div className = {s.aboutMe}>
           <div>About me: {props.profile.aboutMe}</div> 
           <div>Looking for a job description: {props.profile.lookingForAJobDescription}</div>
