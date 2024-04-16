@@ -1,4 +1,4 @@
-Thank's to IT-KAMASUTRA, https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8
+Thanks to IT-KAMASUTRA, https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8
 
 # Getting Started with Create React App
 
