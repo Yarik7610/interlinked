@@ -1,4 +1,19 @@
-Thanks to IT-KAMASUTRA, https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8
+# Thanks to IT-KAMASUTRA, https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8.
+
+## Images:
+
+### Auth page:
+![Снимок экрана 2024-07-03 150321](https://github.com/Yarik7610/interlinked/assets/108609450/932c41ab-173b-449c-8ac0-1e7fdbd33425)
+
+### Users page:
+![Снимок экрана 2024-07-03 150436](https://github.com/Yarik7610/interlinked/assets/108609450/bb1cf499-8063-4f12-8cf5-d7829a10b923)
+
+## This app has a lot of functionality:
+1. Log in, captcha
+2. Black / white themes
+3. Editing data (socials, status, choosing photo)
+4. Searching other people with pagination
+5. Adding / removing friends and watching their profile
 
 # Getting Started with Create React App
 
