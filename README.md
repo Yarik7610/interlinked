@@ -1,4 +1,4 @@
-# Thanks to IT-KAMASUTRA, https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8.
+# Big thanks to IT-KAMASUTRA, https://www.youtube.com/watch?v=gb7gMluAeao&list=PLcvhF2Wqh7DNVy1OCUpG3i5lyxyBWhGZ8.
 
 ## Images:
 
@@ -7,6 +7,9 @@
 
 ### Users page:
 ![Снимок экрана 2024-07-03 150436](https://github.com/Yarik7610/interlinked/assets/108609450/bb1cf499-8063-4f12-8cf5-d7829a10b923)
+
+### Profile page:
+![image](https://github.com/Yarik7610/interlinked/assets/108609450/48bfa2b8-7d43-45ec-b63f-eb58a178733b)
 
 ## This app has a lot of functionality:
 1. Log in, captcha
